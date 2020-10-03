@@ -53,6 +53,8 @@ export default function Addictional() {
   };
 
   if (user.status === 'loading') return <Redirect to="/user/loading" />;
+  if (user.status === 'end')
+    return (window.location.href = 'http://www.w3schools.com');
 
   const ChangeIcon = () => {
     switch (user.status) {

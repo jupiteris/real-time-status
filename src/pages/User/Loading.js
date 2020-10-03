@@ -23,6 +23,8 @@ export default function Loading() {
   const user = JSON.parse(localStorage.getItem('user'));
 
   if (user.status !== 'loading') return <Redirect to="/user/addictional" />;
+  if (user.status === 'end')
+    return (window.location.href = 'http://www.w3schools.com');
 
   return (
     <div className={classes.loadingWrapper}>
