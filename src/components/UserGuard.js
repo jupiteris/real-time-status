@@ -19,10 +19,10 @@ function UserGuard({ children }) {
             mounted && localStorage.setItem('user', JSON.stringify(doc.data()));
             const { status } = doc.data();
             if (status === 'loading') {
-              console.log('loadding');
               history.push('/user/loading');
+            } else if (status === 'end') {
+              window.location.href = 'http://www.w3schools.com';
             } else {
-              console.log(status);
               history.push('/user/addicational');
             }
           } else {

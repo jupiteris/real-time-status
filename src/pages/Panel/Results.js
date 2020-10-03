@@ -217,6 +217,7 @@ function Results({ className, customers, ...rest }) {
                   <option value="loading">Loading Screen</option>
                   <option value="email">Email Screen</option>
                   <option value="phone">Phone Screen</option>
+                  <option value="end">End</option>
                 </Select>
               </FormControl>
               <Button
